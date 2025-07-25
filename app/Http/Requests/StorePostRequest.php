@@ -23,7 +23,7 @@ class StorePostRequest extends FormRequest
     {
         return [
             'author' => 'required|string',
-            'title' => 'required|string|unique:posts,title|max:255',
+            'title' => 'required|string|unique:posts|max:255',
             'body' => 'required|string'
         ];
     }

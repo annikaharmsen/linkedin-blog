@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 
 function App() {
     return (
-        <div>
+        <div className="w-3/5 mx-auto my-10">
             <Navigation />
 
             <Routes>

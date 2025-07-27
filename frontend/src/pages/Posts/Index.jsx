@@ -6,7 +6,7 @@ export function Index() {
 
     useEffect(() => {
         axios
-            .get(import.meta.env.VITE_API_URL + "/api/posts")
+            .get(import.meta.env.VITE_API_URL + "/posts")
             .then((response) => {
                 setPosts(response.data.data);
             })

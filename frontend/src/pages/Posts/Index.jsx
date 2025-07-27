@@ -6,9 +6,9 @@ export function Index() {
 
     useEffect(() => {
         axios
-            .get("https://jsonplaceholder.typicode.com/posts")
+            .get(import.meta.env.VITE_API_URL + "/api/posts")
             .then((response) => {
-                setPosts(response.data);
+                setPosts(response.data.data);
             })
             .catch((error) => {
                 console.error("Error fetching posts:", error);
@@ -22,7 +22,10 @@ export function Index() {
                         key={post.id}
                         className="p-5 my-5 bg-white rounded-2xl shadow-md text-left"
                     >
-                        <h2 className="mb-5 font-bold">{post.title}</h2>
+                        <h2 className="font-bold">{post.title}</h2>
+                        <p className="mb-5 text-md text-gray-500">
+                            {post.author}
+                        </p>
                         <p>{post.body}</p>
                     </div>
                 ))}

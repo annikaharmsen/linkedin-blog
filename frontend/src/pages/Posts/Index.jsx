@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export function Index() {
     const [posts, setPosts] = useState([]);
@@ -16,6 +17,14 @@ export function Index() {
     }, []);
     return (
         <>
+            <div className="flex">
+                <Link
+                    to="/posts/create"
+                    className="text-sm bg-white rounded-lg py-2 px-4 shadow-md text-left hover:shadow-sm hover:bg-gray-100"
+                >
+                    New Post
+                </Link>
+            </div>
             {posts &&
                 posts.map((post) => (
                     <div

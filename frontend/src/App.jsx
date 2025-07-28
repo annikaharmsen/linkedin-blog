@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Create from "./pages/Posts/Create";
 import Update from "./pages/Posts/Update";
+import Show from "./pages/Posts/Show";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Route path="about" element={<About />} />
                 <Route path="posts/create" element={<Create />} />
                 <Route path="posts/update" element={<Update />} />
+                <Route path="posts/show" element={<Show />} />
             </Routes>
         </div>
     );

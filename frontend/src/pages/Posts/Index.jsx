@@ -23,23 +23,27 @@ export function Index() {
     return (
         <>
             <div className="flex">
-                <Link to="/posts/create" className="button">
+                <Link to="posts/create" className="button">
                     New Post
                 </Link>
             </div>
             {posts &&
                 posts.map((post) => (
                     <>
-                        <div
-                            key={post.id}
-                            className="p-5 my-5 bg-white rounded-2xl shadow-md text-left"
-                        >
-                            <h2 className="text-2xl">{post.title}</h2>
-                            <p className="text-md text-gray-500 mb-4">
-                                {post.author}
-                            </p>
-                            <p className="font-serif">{post.body}</p>
-                        </div>
+                        <Link to="posts/show" state={post} className="group">
+                            <div
+                                key={post.id}
+                                className="p-5 my-5 bg-white rounded-2xl shadow-md text-left"
+                            >
+                                <h2 className="text-2xl group-hover:underline">
+                                    {post.title}
+                                </h2>
+                                <p className="text-md text-gray-500 mb-4">
+                                    {post.author}
+                                </p>
+                                <p className="font-serif">{post.body}</p>
+                            </div>
+                        </Link>
                         <div className="flex space-x-4 justify-end">
                             <Link
                                 to="/posts/update"

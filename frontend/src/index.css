@@ -1,5 +1,25 @@
 @import "tailwindcss";
 
+h1 {
+    @apply font-serif;
+}
+
 .active /* this class is automatically assigned to the NavLink of the active page */ {
     @apply font-bold;
+}
+
+.button {
+    @apply text-sm inline-block rounded-lg py-2 px-4 shadow-md hover:shadow-sm bg-white hover:bg-gray-50;
+
+    &.red {
+        @apply text-white bg-red-800 hover:bg-red-900;
+    }
+
+    &.yellow {
+        @apply text-white bg-yellow-600 hover:bg-yellow-700;
+    }
+
+    &.green {
+        @apply text-white bg-emerald-800 hover:bg-green-900;
+    }
 }

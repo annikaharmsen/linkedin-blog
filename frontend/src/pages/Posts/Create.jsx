@@ -31,7 +31,9 @@ export default function Create() {
     return (
         <form onSubmit={handleSubmit}>
             <div className="p-5 my-5 bg-white rounded-2xl shadow-md text-left">
-                <h1 className="font-bold pb-4">Create New Post</h1>
+                <h1 className="text-2xl pb-4 text-center mb-4">
+                    Create New Post
+                </h1>
 
                 <div className="w-full flex">
                     <label htmlFor="title" className="my-2 mr-4">
@@ -69,16 +71,10 @@ export default function Create() {
             </div>
 
             <div className="flex space-x-5 justify-end">
-                <Link
-                    to="/"
-                    className="text-sm bg-white rounded-lg py-2 px-4 shadow-md text-left hover:shadow-sm hover:bg-gray-100"
-                >
+                <Link to="/" className="button yellow">
                     Cancel
                 </Link>
-                <button
-                    type="submit"
-                    className="text-sm bg-white rounded-lg py-2 px-4 shadow-md text-left hover:shadow-sm hover:bg-gray-100"
-                >
+                <button type="submit" className="button green">
                     Create Post
                 </button>
             </div>
